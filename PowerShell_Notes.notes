@@ -1,3 +1,39 @@
+== COMMANDS ==
+- `$PSVersionTable` Shows the table with the current PS versions
+- `powershell --version 5.0` Changes the version
+- `powershell` Changes the version to the latest available
+- `Start-Process Powershell -verb runas` Starts PS as administrator
+- `Update-Help` Update the help files
+- `Get-ExecutionPolicy` Check permisions to executPe
+- `Set-ExecutionPolicy RemoteSigned` Modify ExecutionPolicy  (use RemoteSigned to be able to execute scripts)
+- `Enable-PSRemoting` (run on this on remote computers or servers) To be run on remote computes where you want to remotely execute your own scripts (from your computer)
+- `$profile` check the profile being applied
+- `Test-Path $profile` verifies the path
+- `New-Item -path $profile -type file -force` create a file
+- `Get-Help <cmdlet> [-examples] ¦ [-detailed] ¦ [-full] ¦ [-ShowWindow]¦ [-online]` / `Help <cmdlet>` / <cmdlet> -?
+- `Get-Command`
+- `anycomand | more` Use more to paginate the info
+- `Formate-Wide` `Format-List` `Format-Table` `Format-Custom`
+  -> Example: Get-Process | Format-Wide
+- `Get-ChildItem` (folders, register, etc ...) (gci also works) - Get files
+- `Get-Service | Where-Object {$_.Status -Match "Stop*"}` Filter objects
+  $_ is the item at hand
+
+- Straight forward to use a dll program in C# !!!!!!!
+[Reflection.Assembly]::LoadFile("PATH_OF_FILE")
+$myObject = new-object NAME_Of_DLL.NameOfObject // Maybe NAME_OF_NAMESPACE instead of NAME_OF_DLL
+$myObject.METHOD
+$myObject | get-Member
+
+== COMMON CMDLET VERBS ==
+Get/Set
+Enable/Disable
+New/Remove
+-> Other verbs used: Add, Clear, Expoert, Format, Import, Invoke
+VERB-noun -Parameter argumeent
+Get-Process -name ANY_NAME
+
+
 == TITLE ==
 #SUBTITLE#
 //TINY TITLE
